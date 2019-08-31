@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Create React App Atomic
+Este es un proyecto en el que se muestra un template creado con el commando create-react-app aplicando diseño atomico para la generacion de la estructura de los directorios.
 
-## Available Scripts
+## Comenzando 🚀
 
-In the project directory, you can run:
+Todas las funcionalionalidades de create-react-app estan incluidas en el proyecto puesto que se ha generado con la CLI oficial de react en su version actual(3.1.1). 
 
-### `npm start`
+Si quieres ver o consultar alguna informacion sobre  **Deployment**, Instalación  para conocer como desplegar el proyecto consulta la documentacion oficial de react [aqui](README_REACT.md).
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Pre-requisitos 📋
 
-### `npm test`
+Gestor de packetes NPM actualizado. [¿como instalar NPM?](https://nodejs.org/es/)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Instalación y puesta en marcha🔧
+* Haz un folk y descarga o clona el repositorio en tu ordenador. (También puedes descargar y descomprimir el proyecto en un directorio de tu eleccion.) 
+* A continuación entra en el package.json del directorio raiz del proyecto, modifica la version y el nombre del proyecto. 
+* Por último instala las dependencias.
+```
+npm i 
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Construido con 🛠️
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+_Menciona las herramientas que utilizaste para crear tu proyecto_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [create-react-app](https://create-react-app.dev/docs/getting-started) - CLI para crear proyectos en REACTJS
+* [atomic design](http://atomicdesign.bradfrost.com) - Estructura de ficheros y directorios creado por Brad Frost
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Versionado 📌
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/ivanlhz/react-atomic-template/tags).
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Autores ✒️
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* **Iván López** - *Trabajo Inicial* - [ivanlhz](https://github.com/ivanlhz)
 
-## Learn More
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Licencia 📄
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Este proyecto está bajo la Licencia (MIT) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
-### Code Splitting
+## Expresiones de Gratitud 🎁
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 a alguien del equipo. 
+* Da las gracias públicamente 🤓.
+* etc.
