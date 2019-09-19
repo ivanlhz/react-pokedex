@@ -1,13 +1,6 @@
 .t-main{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto;  
+    width: 100%;
     text-align: center;
-    background-color: #61dafb;
 }
 
 .t-main-header {

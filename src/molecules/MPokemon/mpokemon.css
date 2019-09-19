@@ -1,0 +1,8 @@
+.pokemon {
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon img:hover {
+    filter: drop-shadow(0 1mm 4mm rgba(0, 0, 0, .8));
+}   

@@ -1,33 +1,48 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './PHome.css';
 import logo from '../../logo.svg';
-import { OHeader } from '../../organisms';
+import { OHeader, OPokemonList } from '../../organisms';
 import { TMain } from '../../templates'
+import {getPokemonList, getPokemon} from '../../services/pokeapi'
 
-const PHome = () =>{
-  const blocks = [
-    {logo , title:'Atoms' , content:'Atoms are the smallest possible components, such as buttons, titles, inputs or event color pallets, animations, and fonts. They can be applied on any context, globally or within other components and templates, besides having many states, such as this example of button: disabled, hover, different sizes, etc.'},
-    {logo , title:'Molecules' , content:'They are the composition of one or more components of atoms. Here we begin to compose complex components and reuse some of those components. Molecules can have their own properties and create functionalities by using atoms, which don’t have any function or action by themselves.'},
-    {logo , title:'Organism' , content:'Organisms are the combination of molecules that work together or even with atoms that compose more elaborate interfaces. At this level, the components begin to have the final shape, but they are still ensured to be independent, portable and reusable enough to be reusable in any content.'}
-  ]
 
-  const content = () => (
-    <>
-      <OHeader blocks={blocks}/>
-    </>
-  );
+class PHome extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pokemonList: []
+    }
+  }
 
-  const footer = () => (
-    <>
-      <p>React Atomic design Template - 2019</p>
-    </>
-  )
+  content = () => (<OHeader blocks={this.state.blocks}/>)
+  
+  footer = () => (<p>React Atomic design Template - 2019</p>)
 
-  return (
-    <>
-      <TMain content = {content()} footer = {footer()} />
-    </>
-  );
+  async componentDidMount() {
+    const list = await getPokemonList(0, 151);
+    const pokeListPromises = list.results.map(poke  => {
+      return getPokemon(poke.name)
+    })
+
+    Promise.all(pokeListPromises).then(values => { 
+      this.setState({pokemonList: values})
+    }).catch(reason => { 
+      console.error(reason)
+    });
+  }
+
+
+  render() {
+    return (
+      <>
+        <TMain>
+          {
+            this.state.pokemonList.length > 0 && <OPokemonList data={this.state.pokemonList} /> 
+          }
+        </TMain>
+      </>
+    )
+  }
 }
 
 export default PHome;
