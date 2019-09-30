@@ -1,0 +1,9 @@
+.o-topmenu {
+    width: 100%;
+    padding: 16px;
+    color: #B38632;
+    background-color: #FFD17A;
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+    position: fixed;
+    font-size: 2em;
+}

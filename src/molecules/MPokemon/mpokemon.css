@@ -1,8 +1,18 @@
-.pokemon {
+.m-pokemon {
     display: flex;
     flex-direction: column;
 }
 
-.pokemon img:hover {
+.m-pokemon.selected {
+    background-color: pink;
+}
+.m-pokemon.half {
+    background-color: #E8E664;
+}
+.m-pokemon.double {
+    background-color:#CC483C;
+}
+
+.m-pokemon img:hover {
     filter: drop-shadow(0 1mm 4mm rgba(0, 0, 0, .8));
 }   

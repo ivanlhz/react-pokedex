@@ -6,6 +6,9 @@
 .t-main-header {
 
 }
+.t-main-content {
+    padding-top: 100px;
+}
 
 .t-main-content, .t-main-footer {
     display: flex;
@@ -14,5 +17,12 @@
 }
 
 .t-main-footer {
+    display: flex;
     font-weight: 600;
+    min-height: 300px;
+    background-color: #4474B3;
+    align-items: flex-end;
+    color: #94C2FF;
+    margin-top: 16px;
+    padding: 16px;
 }

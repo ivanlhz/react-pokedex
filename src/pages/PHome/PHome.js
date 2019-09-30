@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './PHome.css';
-import logo from '../../logo.svg';
-import { OHeader, OPokemonList } from '../../organisms';
+import { OPokemonList } from '../../organisms';
 import { TMain } from '../../templates'
 import {getPokemonList, getPokemon} from '../../services/pokeapi'
 
@@ -10,13 +9,18 @@ class PHome extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokemonList: []
+      pokemonList: [],
+      types:[]
     }
   }
 
-  content = () => (<OHeader blocks={this.state.blocks}/>)
-  
-  footer = () => (<p>React Atomic design Template - 2019</p>)
+  footer = () => (<p>PokedexJS - Made with ReactJS- 2019</p>)
+
+  selectedHandler = (index) => {
+    const _state =  Object.assign({}, this.state);
+    _state.pokemonList[index].selected =  !_state.pokemonList[index].selected;
+    this.setState({pokemonList:_state.pokemonList});
+  }
 
   async componentDidMount() {
     const list = await getPokemonList(0, 151);
@@ -35,9 +39,9 @@ class PHome extends Component {
   render() {
     return (
       <>
-        <TMain>
+        <TMain footer={this.footer}>
           {
-            this.state.pokemonList.length > 0 && <OPokemonList data={this.state.pokemonList} /> 
+            this.state.pokemonList.length > 0 && <OPokemonList data={this.state.pokemonList} selectedHandler={this.selectedHandler} /> 
           }
         </TMain>
       </>

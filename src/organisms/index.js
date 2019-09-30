@@ -1,2 +1,2 @@
-export * from './OHeader'
 export * from './OPokemonList'
+export * from './OTopMenu'
