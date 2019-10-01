@@ -8,8 +8,8 @@ const OPokemonList = ({data, selectedHandler}) => {
         <div className="o-pokelist">
             {
                 data.map(({name, id, sprites:{front_default}, double, selected, half}, index) => (
-                    <div onClick={ () => selectedHandler(index) }>
-                        <MPokemon key={id} name={name} id={id} sprite={front_default} double={double} selected= {selected} half={half} />
+                    <div  key={id} onClick={ () => selectedHandler(index) }>
+                        <MPokemon name={name} id={id} sprite={front_default} double={double} selected= {selected} half={half} />
                     </div>
                 ))
             }
