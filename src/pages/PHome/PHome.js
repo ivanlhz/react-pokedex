@@ -58,7 +58,6 @@ class PHome extends Component {
 
           return poke;
        });
-       console.log(newPokeList)
        this.setState({pokemonList: newPokeList})
      });
     }

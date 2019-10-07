@@ -19,7 +19,9 @@ const getClassName = ( selected, strong, weak) => {
    return textToReturn;
 } 
 
-const MPokemon = ({name, id, sprite, selected, strong, weak}) => {
+const getTypeClassName = (name) => 'type-' + name
+
+const MPokemon = ({name, id, sprite, selected, strong, weak, types}) => {
     return (
         <div className={getClassName(selected, strong, weak)}>
             <div className="id">{id}</div>
@@ -27,6 +29,9 @@ const MPokemon = ({name, id, sprite, selected, strong, weak}) => {
                 <img src={sprite} alt={name} />
             </div>
             <div className="name">{name}</div>
+            {
+                types && types.map( type => <div className={getTypeClassName(type.name)}>{type.name}</div> )
+            }
         </div>
     )
 }
