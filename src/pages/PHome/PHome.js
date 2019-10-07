@@ -50,11 +50,12 @@ class PHome extends Component {
        const strongTypes = this.getStrong(typeList);
 
        const newPokeList = pokemonList.map( poke => {
-          const found = poke.types.find(({type:{name}}) => weakTypes.includes(name));
-          poke.weak = found ? true : false;
+          poke.types = poke.types.map( type => {
+            poke.weak = weakTypes.includes(type.type.name)
+            poke.strong = strongTypes.includes(type.type.name);
+            return type;
+          });
 
-          const strongFound = poke.types.find(({type:{name}}) => strongTypes.includes(name));
-          poke.strong = strongFound ? true : false;
           return poke;
        });
        console.log(newPokeList)
