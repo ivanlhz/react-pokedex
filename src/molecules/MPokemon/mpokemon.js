@@ -2,26 +2,26 @@ import React from 'react'
 import './mpokemon.css'
 
 
-const getClassName = ( selected, half, double) => {
+const getClassName = ( selected, strong, weak) => {
    let textToReturn = 'm-pokemon';
 
    if (selected) {
     textToReturn += ' selected'
    }
 
-   if (half) {
-    textToReturn += ' half'
+   if (strong) {
+    textToReturn += ' strong'
    } 
    
-   if (double) {
-    textToReturn += ' double'
+   if (weak) {
+    textToReturn += ' weak'
    }
    return textToReturn;
 } 
 
-const MPokemon = ({name, id, sprite, selected, half, double}) => {
+const MPokemon = ({name, id, sprite, selected, strong, weak}) => {
     return (
-        <div className={getClassName(selected, half, double)}>
+        <div className={getClassName(selected, strong, weak)}>
             <div className="id">{id}</div>
             <div className="sprite">
                 <img src={sprite} alt={name} />

@@ -7,10 +7,10 @@
 .m-pokemon.selected {
     background-color: pink;
 }
-.m-pokemon.half {
-    background-color: #E8E664;
+.m-pokemon.strong {
+    background-color: #00c24a;
 }
-.m-pokemon.double {
+.m-pokemon.weak {
     background-color:#CC483C;
 }
 

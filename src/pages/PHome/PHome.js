@@ -34,6 +34,10 @@ class PHome extends Component {
     return  damageTypes.filter(n => n)
   }
 
+  getStrong = (typeList) => {
+    return  typeList.map((type) => type.damage_relations.double_damage_to.map(({name}) => name )).flat();
+  }
+
   selectedHandler = (index) => {
     const pokemonList = this.deselectPokemons(this.state.pokemonList);
     pokemonList[index].selected =  !pokemonList[index].selected;
@@ -42,13 +46,18 @@ class PHome extends Component {
      const typeInfoPromises = pokemonList[index].types.map( ({type:{name}}) => getPokemonTypeInfo(name)) ;
      Promise.all(typeInfoPromises).then( (typeList) => {
        // Remove undefined
-       const damageTypes = this.getWeakness(typeList);
+       const weakTypes = this.getWeakness(typeList);
+       const strongTypes = this.getStrong(typeList);
+
        const newPokeList = pokemonList.map( poke => {
-          const found = poke.types.find(({type:{name}}) => damageTypes.includes(name));
-          poke.double = found ? true : false;
+          const found = poke.types.find(({type:{name}}) => weakTypes.includes(name));
+          poke.weak = found ? true : false;
+
+          const strongFound = poke.types.find(({type:{name}}) => strongTypes.includes(name));
+          poke.strong = strongFound ? true : false;
           return poke;
        });
-
+       console.log(newPokeList)
        this.setState({pokemonList: newPokeList})
      });
     }
