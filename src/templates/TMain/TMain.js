@@ -4,7 +4,7 @@ import './tmain.css'
 
 const TMain = ({header, footer, children}) => (
     <div className='t-main'>
-        <OTopMenu />
+        <OTopMenu title="REACTJS - POKEDEX" />
         { 
             header ? <div className="t-main-header">{header}</div> : ''
         }

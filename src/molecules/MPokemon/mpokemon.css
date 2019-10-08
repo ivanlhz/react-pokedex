@@ -22,6 +22,15 @@
 .m-pokemon.selected img {
     transform: scale(1.5);
 } 
+.m-pokemon .number {
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.m-pokemon .content {
+    border: 1px solid white;
+    border-top: 0;
+}
 
 .m-pokemon img:hover {
     filter: drop-shadow(0 1mm 4mm #ffffffcc);
