@@ -3,11 +3,8 @@
     text-align: center;
 }
 
-.t-main-header {
-
-}
 .t-main-content {
-    padding-top: 100px;
+    padding: 100px 16px;
 }
 
 .t-main-content, .t-main-footer {

@@ -1,45 +1,51 @@
 .m-pokemon {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
     position: relative;
+    min-height: 225px;
 }
-
-.m-pokemon.selected {
+.default {
+    background-color: white;
+}
+.selected {
     background-color: pink;
 }
 
-.m-pokemon.selected .name {
-    font-weight: bold;
-}
-
-.m-pokemon.strong {
+.strong {
     background-color: #00c24a;
 }
-.m-pokemon.weak {
+.weak {
     background-color:#CC483C;
 }
 
-.m-pokemon.selected img {
+.selected img {
     transform: scale(1.5);
 } 
 .m-pokemon .number {
-    background-color: white;
+    background-color: #2a2a2a;
     border-radius: 5px 5px 0 0;
+    color: white;
+    text-transform: capitalize;
+    padding: 8px;
 }
 
 .m-pokemon .content {
-    border: 1px solid white;
+    border: 1px solid  #2a2a2a;
     border-top: 0;
+    border-bottom: 0;
+    height: 100%;
+}
+
+.m-pokemon .p-type{
+    border: 1px solid  #2a2a2a;
+    border-top: 0;
+    display: grid;
 }
 
 .m-pokemon img:hover {
     filter: drop-shadow(0 1mm 4mm #ffffffcc);
     animation: scaleAnimation 1s infinite
 }   
-.m-pokemon .name {
-    text-transform: capitalize;
-    text-shadow: white 1px 1px 3px;
-}
 
 @keyframes scaleAnimation {
     0%   { transform: scale(1) }

@@ -1,1 +1,1 @@
-export {default as AIcon} from './AIcon'
+export {default as AType} from './AType'

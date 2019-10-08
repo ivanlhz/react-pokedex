@@ -1,9 +1,9 @@
 import React from 'react'
 import './mpokemon.css'
-
+import {AType} from '../../atoms'
 
 const getClassName = ( selected, strong, weak) => {
-   let textToReturn = 'm-pokemon';
+   let textToReturn = 'content';
 
    if (selected) {
     textToReturn += ' selected'
@@ -16,22 +16,28 @@ const getClassName = ( selected, strong, weak) => {
    if (weak) {
     textToReturn += ' weak'
    }
+
+   if (!selected && !strong && !weak) {
+    textToReturn += ' default'
+   }
    return textToReturn;
 } 
 
-const getTypeClassName = (name) => 'type-' + name
-
 const MPokemon = ({name, id, sprite, selected, strong, weak, types}) => {
     return (
-        <div className={getClassName(selected, strong, weak)}>
-            <div className="number">{id}</div>
-            <div className="content">
+        <div className="m-pokemon ">
+            <div className="number">
+                <p>{id}</p>
+                <p>{name}</p>
+            </div>
+            <div  className={getClassName(selected, strong, weak)}>
                 <div className="sprite">
                     <img src={sprite} alt={name} />
                 </div>
-                <div className="name">{name}</div>
+            </div>
+            <div className="p-type">
                 {
-                    types && types.map( (type,index) => <div key={index} className={getTypeClassName(type.name)}>{type.name}</div> )
+                    types && types.map( (type,index) => <AType key={index} name={type.type.name} />)
                 }
             </div>
         </div>

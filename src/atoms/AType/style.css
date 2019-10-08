@@ -1,3 +1,13 @@
+[class^="type-"] {
+    color: white;
+    text-transform: capitalize;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+}
+
 .type-water {
     background-color: #527DEE;
 }
@@ -46,7 +56,7 @@
     background-color: #705848;
 }
 
-.type-posion {
+.type-poison {
     background-color: #A040A0;
 }
 .type-ghost {
@@ -67,4 +77,9 @@
 .type-dragon {
     background-color: #7038F8;
 }
-
+.type-fighting {
+    background-color: #C02F27;
+}
+.type-ground {
+    background-color: #E2C168;
+}
