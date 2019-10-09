@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './PHome.css';
-import { OPokemonList } from '../../organisms';
+import { OPokemonList, OTypeList } from '../../organisms';
 import { TMain } from '../../templates'
 import {getPokemonList, getPokemon, getPokemonTypeInfo} from '../../services/pokeapi'
 
@@ -8,7 +8,8 @@ class PHome extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokemonList: []
+      pokemonList: [],
+      typeList: []
     }
   }
 
@@ -73,6 +74,9 @@ class PHome extends Component {
 
   async componentDidMount() {
     const list = await getPokemonList(0, 151);
+    const listType = await getPokemonTypeInfo();
+    this.setState({typeList: listType.results});
+
     const pokeListPromises = list.results.map(poke  => {
       return getPokemon(poke.name)
     })
@@ -88,6 +92,7 @@ class PHome extends Component {
     return (
       <>
         <TMain footer={this.footer}>
+          <OTypeList list={this.state.typeList}/>
           {
             this.state.pokemonList.length > 0 && <OPokemonList data={this.state.pokemonList} selectedHandler={this.selectedHandler} /> 
           }
