@@ -8,7 +8,9 @@ class PHome extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedType:'',
       pokemonList: [],
+      pokemonListFiltered: [],
       typeList: []
     }
   }
@@ -82,19 +84,35 @@ class PHome extends Component {
     })
 
     Promise.all(pokeListPromises).then(values => { 
-      this.setState({pokemonList: values})
+      this.setState({pokemonList: values, filteredList: values})
     }).catch(reason => { 
       console.error(reason)
     });
+  }
+  
+  filterPokemonByTypeName = (name) => {
+    if ( this.state.selectedType === name) {
+      this.setState({filteredList: this.state.pokemonList, selectedType: ''})
+    } else {
+      const filteredList = this.state.pokemonList.filter( (pokemon) => {
+        return this.pokemonHasType(pokemon, name)
+      });
+
+      this.setState({filteredList, selectedType: name})
+    }
+  }
+
+  pokemonHasType = (pokemon, typeName) => {
+    return pokemon.types.findIndex( ({type}) => type.name === typeName) >= 0 
   }
 
   render() {
     return (
       <>
         <TMain footer={this.footer}>
-          <OTypeList list={this.state.typeList}/>
+          <OTypeList list={this.state.typeList} selected={(name) => this.filterPokemonByTypeName(name)} />
           {
-            this.state.pokemonList.length > 0 && <OPokemonList data={this.state.pokemonList} selectedHandler={this.selectedHandler} /> 
+            this.state.pokemonList.length > 0 && <OPokemonList data={this.state.filteredList} selectedHandler={this.selectedHandler} /> 
           }
         </TMain>
       </>

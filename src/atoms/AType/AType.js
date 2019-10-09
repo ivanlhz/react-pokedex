@@ -1,9 +1,9 @@
 import React from 'react'
 import './style.css'
 
-const AType = ({name}) => {
+const AType = ({name, clickHandler}) => {
     return (
-        <div className={'type-' + name}>{name}</div>
+        <div onClick={clickHandler} className={'type-' + name}>{name}</div>
     )
 } 
 
