@@ -112,7 +112,7 @@ class PHome extends Component {
         <TMain footer={this.footer}>
           <OTypeList list={this.state.typeList} selected={(name) => this.filterPokemonByTypeName(name)} />
           {
-            this.state.pokemonList.length > 0 && <OPokemonList data={this.state.filteredList} selectedHandler={this.selectedHandler} /> 
+            this.state.pokemonList.length > 0 && <OPokemonList data={this.state.filteredList} clickedType = {(name) => this.filterPokemonByTypeName(name)} /> 
           }
         </TMain>
       </>

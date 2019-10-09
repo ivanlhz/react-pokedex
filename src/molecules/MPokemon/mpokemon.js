@@ -23,7 +23,10 @@ const getClassName = ( selected, strong, weak) => {
    return textToReturn;
 } 
 
-const MPokemon = ({name, id, sprite, selected, strong, weak, types}) => {
+const MPokemon = ({name, id, sprite, selected, strong, weak, types, typeCliked}) => {
+    const pokeTypeClicked = (name) => {
+        typeCliked(name);
+    }
     return (
         <div className="m-pokemon ">
             <div className="number">
@@ -37,7 +40,7 @@ const MPokemon = ({name, id, sprite, selected, strong, weak, types}) => {
             </div>
             <div className="p-type">
                 {
-                    types && types.map( (type,index) => <AType key={index} name={type.type.name} />)
+                    types && types.map( (type,index) => <AType key={index} name={type.type.name} clickHandler={() => pokeTypeClicked(type.type.name)} />)
                 }
             </div>
         </div>
