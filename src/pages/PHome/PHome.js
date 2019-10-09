@@ -92,19 +92,44 @@ class PHome extends Component {
   
   filterPokemonByTypeName = (name) => {
     if ( this.state.selectedType === name) {
-      this.setState({filteredList: this.state.pokemonList, selectedType: ''})
+      this.setState({
+        filteredList: this.state.pokemonList.map(this.unSelectPokemon), 
+        selectedType: '',
+        typeList: this.state.typeList.map(this.unSelectPokemon)
+      })
     } else {
-      const filteredList = this.state.pokemonList.filter( (pokemon) => {
+      const filteredList = [...this.state.pokemonList.map( (pokemon) => {
         return this.pokemonHasType(pokemon, name)
-      });
+      })];
 
-      this.setState({filteredList, selectedType: name})
+      const selectedTypeList = this.state.typeList.map( (element) => {
+        if(element.name === name){
+          element.unSelected = false;
+        } else {
+          element.unSelected = true;
+        }
+
+        return element;
+      } )
+      this.setState({filteredList, selectedType: name, typeList: selectedTypeList})
     }
   }
 
   pokemonHasType = (pokemon, typeName) => {
-    return pokemon.types.findIndex( ({type}) => type.name === typeName) >= 0 
+     const found = pokemon.types.findIndex( ({type}) => type.name === typeName) >= 0 
+     if (!found) {
+       pokemon.unSelected = true;
+     } else {
+      pokemon.unSelected = false;
+     }
+     return pokemon
   }
+
+  unSelectPokemon = (pokemon) =>  {
+    pokemon.unSelected = false;
+    return pokemon;
+  }
+
 
   render() {
     return (

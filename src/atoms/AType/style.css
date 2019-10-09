@@ -7,6 +7,16 @@
     display: flex;
     height: 100%;
     cursor: pointer;
+    transition: .5s opacity ease-out;
+    opacity: 1;
+}
+
+.unSelected {
+    opacity: .2;
+}
+
+.unSelected:hover {
+    opacity: 1;
 }
 
 .type-water {

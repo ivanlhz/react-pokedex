@@ -3,19 +3,15 @@
     grid-template-rows: auto auto 1fr;
     position: relative;
     min-height: 225px;
+    transition: all 1s ease-out;
+    opacity: 1;
 }
+
 .default {
     background-color: white;
 }
-.selected {
-    background-color: pink;
-}
-
-.strong {
-    background-color: #00c24a;
-}
-.weak {
-    background-color:#CC483C;
+.unSelected {
+   opacity: .2;
 }
 
 .selected img {

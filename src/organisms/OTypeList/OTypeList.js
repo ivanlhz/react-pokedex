@@ -12,7 +12,7 @@ const OTypeList = ({list, selected}) => {
     return (
         <div className="o-typelist">
         {
-            list && list.map( (type, index) => <AType key={index} name={type.name} clickHandler={() => typeClicked(type.name)} />)
+            list && list.map( (type, index) => <AType key={index} name={type.name} clickHandler={() => typeClicked(type.name)} unSelected={type.unSelected} />)
         }
         </div>
     )

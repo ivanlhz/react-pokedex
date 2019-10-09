@@ -12,9 +12,9 @@ const OPokemonList = ({data, clickedType}) => {
     return (
         <div className="o-pokelist">
             {
-                data.map(({name, id, sprites:{front_default}, strong, selected, weak, types}, index) => (
+                data.map(({name, id, sprites:{front_default}, unSelected, types}) => (
                     <div  key={id}>
-                        <MPokemon name={name} id={id} sprite={front_default} weak={weak} selected= {selected} strong={strong} types={types} typeCliked={pokemonsTypeClicked} />
+                        <MPokemon name={name} id={id} sprite={front_default} unSelected={unSelected} types={types} typeCliked={pokemonsTypeClicked} />
                     </div>
                 ))
             }

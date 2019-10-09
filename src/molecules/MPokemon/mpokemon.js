@@ -2,38 +2,27 @@ import React from 'react'
 import './mpokemon.css'
 import {AType} from '../../atoms'
 
-const getClassName = ( selected, strong, weak) => {
-   let textToReturn = 'content';
+const getClassName = (unSelected) => {
+   let textToReturn = 'm-pokemon';
 
-   if (selected) {
-    textToReturn += ' selected'
+   if (unSelected) {
+    textToReturn += ' unSelected'
    }
 
-   if (strong) {
-    textToReturn += ' strong'
-   } 
-   
-   if (weak) {
-    textToReturn += ' weak'
-   }
-
-   if (!selected && !strong && !weak) {
-    textToReturn += ' default'
-   }
    return textToReturn;
 } 
 
-const MPokemon = ({name, id, sprite, selected, strong, weak, types, typeCliked}) => {
+const MPokemon = ({name, id, sprite, unSelected, types, typeCliked}) => {
     const pokeTypeClicked = (name) => {
         typeCliked(name);
     }
     return (
-        <div className="m-pokemon ">
+        <div  className= {getClassName(unSelected)}>
             <div className="number">
                 <p>{id}</p>
                 <p>{name}</p>
             </div>
-            <div  className={getClassName(selected, strong, weak)}>
+            <div  className="content default">
                 <div className="sprite">
                     <img src={sprite} alt={name} />
                 </div>
