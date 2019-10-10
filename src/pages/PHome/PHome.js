@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './PHome.css';
 import { OPokemonList, OTypeList } from '../../organisms';
-import { TMain } from '../../templates'
 import {getPokemonList, getPokemon, getPokemonTypeInfo} from '../../services/pokeapi'
 
 class PHome extends Component {
@@ -14,8 +13,6 @@ class PHome extends Component {
       typeList: []
     }
   }
-
-  footer = () => (<p>PokedexJS - Made with ReactJS- 2019</p>)
 
   getWeakness = (typeList) => {
     let damageTypes = typeList.map((type) => type.damage_relations.double_damage_from.map( ({name}) => name )).flat();
@@ -134,12 +131,10 @@ class PHome extends Component {
   render() {
     return (
       <>
-        <TMain footer={this.footer}>
           <OTypeList list={this.state.typeList} selected={(name) => this.filterPokemonByTypeName(name)} />
           {
             this.state.pokemonList.length > 0 && <OPokemonList data={this.state.filteredList} clickedType = {(name) => this.filterPokemonByTypeName(name)} /> 
           }
-        </TMain>
       </>
     )
   }
