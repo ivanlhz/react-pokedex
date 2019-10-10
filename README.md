@@ -1,32 +1,26 @@
-# Create React App Atomic
-Este es un proyecto en el que se muestra un template creado con el commando create-react-app aplicando diseño atomico para la generacion de la estructura de los directorios.
-
-## Comenzando 🚀
+# React - Pokedex
+Este proyecto ha sido creado durante streaming en directo en [twitch.tv](https://www.twitch.tv/ivanlhz) en el que hemos ido creando y enseñando poco a poco como generar un proyecto real con ReactJS desde 0.
 
 Todas las funcionalionalidades de create-react-app estan incluidas en el proyecto puesto que se ha generado con la CLI oficial de react en su version actual(3.1.1). 
 
 Si quieres ver o consultar alguna informacion sobre  **Deployment**, Instalación  para conocer como desplegar el proyecto consulta la documentacion oficial de react [aqui](README_REACT.md).
 
 
-### Pre-requisitos 📋
-
-Gestor de packetes NPM actualizado. [¿como instalar NPM?](https://nodejs.org/es/)
-
-
-### Instalación y puesta en marcha🔧
+### Instalación y puesta a punto🔧
 * Haz un folk y descarga o clona el repositorio en tu ordenador. (También puedes descargar y descomprimir el proyecto en un directorio de tu eleccion.) 
 * A continuación entra en el package.json del directorio raiz del proyecto, modifica la version y el nombre del proyecto. 
 * Por último instala las dependencias.
 ```
 npm i 
 ```
+o
+```
+yarn install
+```
 
 ## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [create-react-app](https://create-react-app.dev/docs/getting-started) - CLI para crear proyectos en REACTJS
-* [atomic design](http://atomicdesign.bradfrost.com) - Estructura de ficheros y directorios creado por Brad Frost
+* [PokeApi](https://pokeapi.co/) - API rest online donde consultamos la informacion de los pokemon.
+* [Atomic React Boilerplate](https://github.com/ivanlhz/react-atomic-template) - Proyecto base que aplica Atomic Design en un proyecto base generado con la cli de create-react-app.
 
 
 ## Versionado 📌
@@ -42,10 +36,3 @@ También puedes mirar la lista de todos los [contribuyentes](https://github.com/
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia (MIT) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
