@@ -1,6 +1,7 @@
 import React from 'react'
 import './mpokemon.css'
 import {AType} from '../../atoms'
+import {navigate} from '@reach/router'
 
 const getClassName = (unSelected) => {
    let textToReturn = 'm-pokemon';
@@ -16,13 +17,18 @@ const MPokemon = ({name, id, sprite, unSelected, types, typeCliked}) => {
     const pokeTypeClicked = (name) => {
         typeCliked(name);
     }
+
+    const goToDetails = (name) => {
+        navigate(`/pokemon/${name}`)
+    }
+
     return (
         <div  className= {getClassName(unSelected)}>
-            <div className="number">
+            <div className="number" onClick={() => goToDetails(name)}>
                 <p>{id}</p>
                 <p>{name}</p>
             </div>
-            <div  className="content default">
+            <div className="content default" onClick={() => goToDetails(name)}>
                 <div className="sprite">
                     <img src={sprite} alt={name} />
                 </div>

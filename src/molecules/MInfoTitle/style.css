@@ -1,0 +1,12 @@
+.m-infotitle {
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 75px;  
+    color: black;
+}
+
+.m-infotitle span {
+    font-size: 64px;
+    line-height: 75px;
+    color: #FFD17A;
+}

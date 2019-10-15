@@ -12,7 +12,7 @@ const AppRouter = () => {
             <Router>
                 <PHome path="/" />
                 <PPokemon path="/pokemon/:name" />
-                <PNotFound path="/:notfound" />
+                <PNotFound default />
             </Router>
         </TMain>
     )

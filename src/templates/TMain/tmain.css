@@ -1,23 +1,14 @@
 .t-main{
+    display: grid;
     width: 100%;
-    text-align: center;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    min-height: calc(100vh - 70px);
 }
 
-.t-main-content {
-    padding: 100px 16px;
-}
-
-.t-main-content, .t-main-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.t-main-footer {
+.t-footer {
     display: flex;
     font-weight: 600;
-    min-height: 300px;
     background-color: #4474B3;
     align-items: flex-end;
     color: #94C2FF;
