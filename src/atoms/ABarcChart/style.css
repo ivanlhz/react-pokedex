@@ -1,0 +1,16 @@
+.a-barchart{
+    min-width: 20px;
+    height: 11px;
+}
+
+.a-barchart .yellow {
+    background-color: #FFDD57;
+}
+
+.a-barchart .green {
+    background-color: #83FF57;
+}
+
+.a-barchart .red {
+    background-color: #FF6464;
+}
