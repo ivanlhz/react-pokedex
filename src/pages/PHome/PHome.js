@@ -70,22 +70,6 @@ class PHome extends Component {
       return poke;
     })]
   }
-
-  async componentDidMount() {
-    const list = await getPokemonList(0, 151);
-    const listType = await getPokemonTypeInfo();
-    this.setState({typeList: listType.results});
-
-    const pokeListPromises = list.results.map(poke  => {
-      return getPokemon(poke.name)
-    })
-
-    Promise.all(pokeListPromises).then(values => { 
-      this.setState({pokemonList: values, filteredList: values})
-    }).catch(reason => { 
-      console.error(reason)
-    });
-  }
   
   filterPokemonByTypeName = (name) => {
     if ( this.state.selectedType === name) {
@@ -127,6 +111,21 @@ class PHome extends Component {
     return pokemon;
   }
 
+  async componentDidMount() {
+    const list = await getPokemonList(0, 151);
+    const listType = await getPokemonTypeInfo();
+    this.setState({typeList: listType.results});
+
+    const pokeListPromises = list.results.map(poke  => {
+      return getPokemon(poke.name)
+    })
+
+    Promise.all(pokeListPromises).then(values => { 
+      this.setState({pokemonList: values, filteredList: values})
+    }).catch(reason => { 
+      console.error(reason)
+    });
+  }
 
   render() {
     return (

@@ -3,10 +3,12 @@
     font-size: 64px;
     line-height: 75px;  
     color: black;
+    text-transform: capitalize;
 }
 
 .m-infotitle span {
     font-size: 64px;
     line-height: 75px;
     color: #FFD17A;
+    font-weight: normal;
 }
