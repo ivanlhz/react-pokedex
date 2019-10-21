@@ -1,9 +1,7 @@
 import React from 'react'
 import './style.css'
 
-
 const ABarChart = ({value}) => {
-
     const getClassName = (currentValue) => {
         let toReturn = 'a-barchart';
         switch (currentValue) {
@@ -17,7 +15,6 @@ const ABarChart = ({value}) => {
                 toReturn +=' green'
                 break;
         }
-
         return toReturn
     }
 

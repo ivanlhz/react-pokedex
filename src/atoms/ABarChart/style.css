@@ -3,14 +3,14 @@
     height: 11px;
 }
 
-.a-barchart .yellow {
+.a-barchart.yellow {
     background-color: #FFDD57;
 }
 
-.a-barchart .green {
+.a-barchart.green {
     background-color: #83FF57;
 }
 
-.a-barchart .red {
+.a-barchart.red {
     background-color: #FF6464;
 }
