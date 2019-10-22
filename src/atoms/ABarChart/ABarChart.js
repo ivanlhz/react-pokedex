@@ -1,24 +1,29 @@
 import React from 'react'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 import './style.css'
+
+
 
 const ABarChart = ({value}) => {
     const getClassName = (currentValue) => {
+        console.log(currentValue)
         let toReturn = 'a-barchart';
-        switch (currentValue) {
-            case value < 40 :
-                toReturn +=' red'
-                break;
-            case  value >=40 && value < 60 :
-                toReturn +=' yellow'
-                break;
-            default:
-                toReturn +=' green'
-                break;
+        if (currentValue  < 40) {
+            toReturn +=' red'
+        } else if ( currentValue >=40 && currentValue < 70) {
+            toReturn +=' yellow'
+        } else {
+            toReturn +=' green'
         }
         return toReturn
     }
 
-    return <div className={getClassName(value)}></div>
+    return (
+        <div className={getClassName(value)} css={css`
+            width: ${ (value * 100) / 255 }%;
+        `} />
+    )
 }
 
 export default ABarChart
