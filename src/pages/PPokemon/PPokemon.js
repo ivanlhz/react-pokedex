@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import {getPokemon, getPokemonSpecies} from '../../services/pokeapi'
 import {MCircleImage} from '../../molecules'
 import { OInfoBlock } from '../../organisms';
+import { TMain } from '../../templates';
 import './style.css'
 
 
-const PPokemon = ({name}) => {
+const PPokemon = ({name, location}) => {
     const [pokemon, setPokemon] = useState({data:{}, specie:{}});
 
     useEffect(() => {
@@ -22,10 +23,12 @@ const PPokemon = ({name}) => {
     }
 
     return (
-        <div className="p-pokemon">
-           { pokemon && <MCircleImage imgSrc={`https://img.pokemondb.net/artwork/${pokemon.data.name}.jpg`} /> }
-           {  pokemon.specie.flavor_text_entries && pokemon.specie.flavor_text_entries.length > 0 && <OInfoBlock name={pokemon.specie.name} number={pokemon.data.id} stats={pokemon.data.stats} types={pokemon.data.types} description={getDescription(pokemon.specie.flavor_text_entries)}/>}
-        </div>
+        <TMain location={location} >
+            <div className="p-pokemon">
+            { pokemon && <MCircleImage imgSrc={`https://img.pokemondb.net/artwork/${pokemon.data.name}.jpg`} /> }
+            {  pokemon.specie.flavor_text_entries && pokemon.specie.flavor_text_entries.length > 0 && <OInfoBlock name={pokemon.specie.name} number={pokemon.data.id} stats={pokemon.data.stats} types={pokemon.data.types} description={getDescription(pokemon.specie.flavor_text_entries)}/>}
+            </div>
+        </TMain>
     )
 }
 

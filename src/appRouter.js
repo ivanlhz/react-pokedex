@@ -8,13 +8,11 @@ const AppRouter = () => {
     const footer = () => (<p>PokedexJS - Made with ReactJS- 2019</p>)
 
     return (
-        <TMain footer={footer}>
-            <Router>
-                <PHome path="/" />
-                <PPokemon path="/pokemon/:name" />
-                <PNotFound default />
-            </Router>
-        </TMain>
+        <Router>
+            <PHome path="/" />
+            <PPokemon path="/pokemon/:name" />
+            <PNotFound default />
+        </Router>
     )
 }
 

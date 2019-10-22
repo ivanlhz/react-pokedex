@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './PHome.css';
 import { OPokemonList, OTypeList } from '../../organisms';
 import {getPokemonList, getPokemon, getPokemonTypeInfo} from '../../services/pokeapi'
+import {TMain} from '../../templates'
 
 class PHome extends Component {
   constructor(props) {
@@ -129,12 +130,12 @@ class PHome extends Component {
 
   render() {
     return (
-      <>
+      <TMain location={this.props.location} >
           <OTypeList list={this.state.typeList} selected={(name) => this.filterPokemonByTypeName(name)} />
           {
             this.state.pokemonList.length > 0 && <OPokemonList data={this.state.filteredList} clickedType = {(name) => this.filterPokemonByTypeName(name)} /> 
           }
-      </>
+      </TMain>
     )
   }
 }

@@ -2,9 +2,9 @@ import React from 'react'
 import { OTopMenu } from '../../organisms' 
 import './tmain.css'
 
-const TMain = ({header, footer, children}) => (
-    <>
-        <OTopMenu title="REACTJS - POKEDEX" />
+const TMain = ({header, footer, children, location}) => (
+    <>  
+        <OTopMenu title="REACTJS - POKEDEX" location={location} />
         <div className='t-main'>
             { 
                 header ? <div className="t-main-header">{header}</div> : ''
