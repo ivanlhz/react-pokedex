@@ -3,3 +3,8 @@
     flex-wrap: wrap;
     margin-bottom: 16px;
 }
+
+.o-typelist [class^="type-"] {
+    width: 100px;
+    padding: 16px;
+}

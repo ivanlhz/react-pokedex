@@ -1,6 +1,7 @@
 .a-barchart{
     min-width: 20px;
     height: 11px;
+    border-radius: 5px;
 }
 
 .a-barchart.yellow {

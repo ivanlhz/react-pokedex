@@ -1,4 +1,3 @@
-import React from 'react'
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 import './style.css'
@@ -7,7 +6,6 @@ import './style.css'
 
 const ABarChart = ({value}) => {
     const getClassName = (currentValue) => {
-        console.log(currentValue)
         let toReturn = 'a-barchart';
         if (currentValue  < 40) {
             toReturn +=' red'

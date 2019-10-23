@@ -1,11 +1,10 @@
 [class^="type-"] {
-    color: white;
     text-transform: capitalize;
-    padding: 8px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
     align-items: center;
     justify-content: center;
     display: flex;
-    height: 100%;
     cursor: pointer;
     transition: .5s opacity ease-out;
     opacity: 1;

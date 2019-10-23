@@ -1,8 +1,7 @@
 .o-topmenu {
     width: 100%;
     padding: 16px;
-    color: #B38632;
-    background-color: #FFD17A;
+    background-color: #ffd37c;
     box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
     font-size: 2em;
     z-index: 1;
@@ -12,9 +11,14 @@
     align-items: center;
 }
 
+.o-topmenu-title {
+    font-size: 2rem;
+    color: #2e343b;
+}
+
 .o-topmenu  a{
     margin-left: auto;
-    color: white;
+    color: #6c7a89;
     text-decoration: none;
     font-weight: 200;
     font-size: 24px;

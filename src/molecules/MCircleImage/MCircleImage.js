@@ -2,10 +2,10 @@ import React from 'react'
 import './style.css'
 
 
-const MCircleImage = ({imgSrc}) => {
+const MCircleImage = ({imgSrc, alt}) => {
     return (
         <div className="m-circleimage">
-            <img src={imgSrc} alt=""/>
+            <img src={imgSrc} alt={alt}/>
         </div>
     )
 }

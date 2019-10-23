@@ -26,7 +26,7 @@ const MPokemon = ({name, id, sprite, unSelected, types, typeCliked}) => {
         <div  className= {getClassName(unSelected)}>
             <div className="number" onClick={() => goToDetails(name)}>
                 <p>{id}</p>
-                <p>{name}</p>
+                <h2>{name}</h2>
             </div>
             <div className="content default" onClick={() => goToDetails(name)}>
                 <div className="sprite">

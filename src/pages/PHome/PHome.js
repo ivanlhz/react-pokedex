@@ -128,9 +128,11 @@ class PHome extends Component {
     });
   }
 
+  footer = () => (<p>PokedexJS - Made with ReactJS- 2019</p>)
+
   render() {
     return (
-      <TMain location={this.props.location} >
+      <TMain location={this.props.location} footer={this.footer}>
           <OTypeList list={this.state.typeList} selected={(name) => this.filterPokemonByTypeName(name)} />
           {
             this.state.pokemonList.length > 0 && <OPokemonList data={this.state.filteredList} clickedType = {(name) => this.filterPokemonByTypeName(name)} /> 

@@ -21,11 +21,12 @@ const PPokemon = ({name, location}) => {
     const getDescription = (descList, lang = 'en') => {
         return descList.filter( element =>  element.language.name === lang)[0].flavor_text;
     }
+    const footer = () => (<p>PokedexJS - Made with ReactJS- 2019</p>)
 
     return (
-        <TMain location={location} >
+        <TMain location={location} footer= {footer}>
             <div className="p-pokemon">
-            { pokemon && <MCircleImage imgSrc={`https://img.pokemondb.net/artwork/${pokemon.data.name}.jpg`} /> }
+            { pokemon && <MCircleImage imgSrc={`https://img.pokemondb.net/artwork/${pokemon.data.name}.jpg`} alt={'pokemon-' + pokemon.specie.name} /> }
             {  pokemon.specie.flavor_text_entries && pokemon.specie.flavor_text_entries.length > 0 && <OInfoBlock name={pokemon.specie.name} number={pokemon.data.id} stats={pokemon.data.stats} types={pokemon.data.types} description={getDescription(pokemon.specie.flavor_text_entries)}/>}
             </div>
         </TMain>
