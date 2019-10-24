@@ -10,4 +10,4 @@ const MCircleImage = ({imgSrc, alt}) => {
     )
 }
 
-export default MCircleImage;
+export default React.memo(MCircleImage);

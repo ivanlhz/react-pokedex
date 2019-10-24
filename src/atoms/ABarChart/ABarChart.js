@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
+import React from 'react'
 import './style.css'
 
 
@@ -24,4 +25,4 @@ const ABarChart = ({value}) => {
     )
 }
 
-export default ABarChart
+export default React.memo(ABarChart)

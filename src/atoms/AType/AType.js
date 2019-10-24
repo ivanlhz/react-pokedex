@@ -15,4 +15,4 @@ const AType = ({name, unSelected, clickHandler}) => {
     )
 } 
 
-export default AType;
+export default React.memo(AType);
