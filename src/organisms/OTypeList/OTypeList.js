@@ -4,7 +4,6 @@ import './style.css';
 
 
 const OTypeList = ({list, selected}) => {
-
     const typeClicked = (name) => {
         if(selected) selected(name);
     }
