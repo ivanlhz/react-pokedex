@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import PropTypes from 'prop-types'
 import {getPokemonSpecies} from '../../services/pokeapi'
 import {MCircleImage} from '../../molecules'
 import {OInfoBlock} from '../../organisms'
@@ -55,6 +56,11 @@ const PPokemon = ({name, location}) => {
       </PokemonContext.Consumer>
     </TMain>
   )
+}
+
+PPokemon.propTypes = {
+  name: PropTypes.string.isRequired,
+  location: PropTypes.object,
 }
 
 export default PPokemon

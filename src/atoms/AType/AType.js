@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './style.css'
 
 const AType = ({name, unSelected, clickHandler}) => {
@@ -15,6 +16,12 @@ const AType = ({name, unSelected, clickHandler}) => {
       {name}
     </div>
   )
+}
+
+AType.propTypes = {
+  name: PropTypes.string.isRequired,
+  unSelected: PropTypes.bool.isRequired,
+  clickHandler: PropTypes.func,
 }
 
 export default React.memo(AType)

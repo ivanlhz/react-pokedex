@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
 import {ABarChart} from '../../atoms'
+import PropTypes from 'prop-types'
 
 const MChartLine = ({data}) => {
   return (
@@ -10,6 +11,12 @@ const MChartLine = ({data}) => {
       <ABarChart value={data.base_stat} />
     </div>
   )
+}
+MChartLine.propTypes = {
+  data: PropTypes.shape({
+    stat: PropTypes.string.isRequired,
+    base_stat: PropTypes.number.isRequired,
+  }),
 }
 
 export default MChartLine

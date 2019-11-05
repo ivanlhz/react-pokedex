@@ -1,6 +1,7 @@
 import React from 'react'
 import {AType} from '../../atoms'
 import './style.css'
+import PropTypes from 'prop-types'
 
 const OTypeList = ({list, selected}) => {
   const typeClicked = name => {
@@ -21,5 +22,7 @@ const OTypeList = ({list, selected}) => {
     </div>
   )
 }
+
+OTypeList.propTypes = {list: PropTypes.array.isRequired, selected: PropTypes.func.isRequired}
 
 export default OTypeList

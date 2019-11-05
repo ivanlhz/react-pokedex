@@ -3,6 +3,7 @@ import './PHome.css'
 import {OPokemonList, OTypeList} from '../../organisms'
 import {TMain} from '../../templates'
 import {PokemonContext} from '../../appRouter'
+import PropTypes from 'prop-types'
 
 class PHome extends Component {
   footer = () => <p>PokedexJS - Made with ReactJS- 2019</p>
@@ -23,6 +24,9 @@ class PHome extends Component {
       </TMain>
     )
   }
+}
+PHome.propTypes = {
+  location: PropTypes.object.isRequired,
 }
 
 export default PHome

@@ -1,6 +1,7 @@
 import React from 'react'
 import {OTopMenu} from '../../organisms'
 import './tmain.css'
+import PropTypes from 'prop-types'
 
 const TMain = ({header, footer, children, location}) => (
   <>
@@ -12,5 +13,12 @@ const TMain = ({header, footer, children, location}) => (
     </div>
   </>
 )
+
+TMain.propTypes = {
+  header: PropTypes.func,
+  footer: PropTypes.func,
+  children: PropTypes.any,
+  location: PropTypes.object,
+}
 
 export default TMain

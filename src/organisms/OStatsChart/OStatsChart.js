@@ -1,5 +1,6 @@
 import React from 'react'
 import {MChartLine} from '../../molecules'
+import PropTypes from 'prop-types'
 
 const OStatsChart = ({stats}) => {
   return (
@@ -10,5 +11,7 @@ const OStatsChart = ({stats}) => {
     </div>
   )
 }
+
+OStatsChart.propTypes = {stats: PropTypes.array.isRequired}
 
 export default OStatsChart

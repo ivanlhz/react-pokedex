@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
 import {Link} from '@reach/router'
+import PropTypes from 'prop-types'
 
 const OTopMenu = ({title, location}) => (
   <div className='o-topmenu'>
@@ -8,4 +9,6 @@ const OTopMenu = ({title, location}) => (
     {location.pathname !== '/' && <Link to='/'>BACK</Link>}
   </div>
 )
+
+OTopMenu.propTypes = {title: PropTypes.string, location: PropTypes.object.isRequired}
 export default React.memo(OTopMenu)

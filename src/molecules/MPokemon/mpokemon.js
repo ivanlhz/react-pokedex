@@ -2,6 +2,7 @@ import React from 'react'
 import './mpokemon.css'
 import {AType} from '../../atoms'
 import {navigate} from '@reach/router'
+import PropTypes from 'prop-types'
 
 const getClassName = unSelected => {
   let textToReturn = 'm-pokemon'
@@ -45,6 +46,15 @@ const MPokemon = ({name, id, sprite, unSelected, types, typeCliked}) => {
       </div>
     </div>
   )
+}
+
+MPokemon.propTypes = {
+  name: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  sprite: PropTypes.object.isRequired,
+  unSelected: PropTypes.bool.isRequired,
+  types: PropTypes.array.isRequired,
+  typeCliked: PropTypes.func,
 }
 
 export default MPokemon

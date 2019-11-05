@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import {css, jsx} from '@emotion/core'
 import React from 'react'
+import Proptypes from 'prop-types'
 import './style.css'
 
 const ABarChart = ({value}) => {
@@ -24,6 +25,9 @@ const ABarChart = ({value}) => {
       `}
     />
   )
+}
+ABarChart.propTypes = {
+  value: Proptypes.number.isRequired,
 }
 
 export default React.memo(ABarChart)
