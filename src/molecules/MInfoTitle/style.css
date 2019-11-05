@@ -1,14 +1,14 @@
 .m-infotitle {
-    font-weight: 300;
-    font-size: 64px;
-    line-height: 75px;  
-    color: black;
-    text-transform: capitalize;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 75px;
+  color: black;
+  text-transform: capitalize;
 }
 
 .m-infotitle span {
-    font-size: 64px;
-    line-height: 75px;
-    color: #ff4500;
-    font-weight: normal;
+  font-size: 64px;
+  line-height: 75px;
+  color: #ff4500;
+  font-weight: normal;
 }

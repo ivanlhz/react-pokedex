@@ -1,1 +1,1 @@
-export {default as MInfoTitle} from './MInfoTitle' 
+export {default as MInfoTitle} from './MInfoTitle'

@@ -1,16 +1,16 @@
-.t-main{
-    display: grid;
-    width: 100%;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr;
-    min-height: calc(100vh - 70px);
+.t-main {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: calc(100vh - 70px);
 }
 .t-footer {
-    display: flex;
-    font-weight: 600;
-    background-color: #4474B3;
-    align-items: flex-end;
-    color: #e4f1fe;
-    margin-top: 16px;
-    padding: 16px;
+  display: flex;
+  font-weight: 600;
+  background-color: #4474b3;
+  align-items: flex-end;
+  color: #e4f1fe;
+  margin-top: 16px;
+  padding: 16px;
 }

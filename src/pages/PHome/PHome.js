@@ -1,22 +1,22 @@
-import React, {Component} from 'react';
-import './PHome.css';
-import { OPokemonList, OTypeList } from '../../organisms';
+import React, {Component} from 'react'
+import './PHome.css'
+import {OPokemonList, OTypeList} from '../../organisms'
 import {TMain} from '../../templates'
-import { PokemonContext } from '../../appRouter';
+import {PokemonContext} from '../../appRouter'
 
 class PHome extends Component {
-  footer = () => (<p>PokedexJS - Made with ReactJS- 2019</p>)
+  footer = () => <p>PokedexJS - Made with ReactJS- 2019</p>
 
   render() {
     return (
       <TMain location={this.props.location} footer={this.footer}>
         <PokemonContext.Consumer>
-          { ({types, pokemons, filterPokemonByTypeName}) => (
+          {({types, pokemons, filterPokemonByTypeName}) => (
             <>
-              <OTypeList list={types} selected={(name) => filterPokemonByTypeName(name)} />
-              {
-                pokemons.length > 0 && <OPokemonList data={pokemons} clickedType = {(name) => filterPokemonByTypeName(name)} /> 
-              }
+              <OTypeList list={types} selected={name => filterPokemonByTypeName(name)} />
+              {pokemons.length > 0 && (
+                <OPokemonList data={pokemons} clickedType={name => filterPokemonByTypeName(name)} />
+              )}
             </>
           )}
         </PokemonContext.Consumer>
@@ -25,4 +25,4 @@ class PHome extends Component {
   }
 }
 
-export default PHome;
+export default PHome

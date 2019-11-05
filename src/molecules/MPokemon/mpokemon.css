@@ -1,55 +1,61 @@
 .m-pokemon {
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    position: relative;
-    min-height: 225px;
-    transition: all 1s ease-out;
-    opacity: 1;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  position: relative;
+  min-height: 225px;
+  transition: all 1s ease-out;
+  opacity: 1;
 }
 
 .m-pokemon h2 {
-    font-size: 1.1rem;
-    text-align: center;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 .default {
-    background-color: white;
+  background-color: white;
 }
 .unSelected {
-   opacity: .2;
+  opacity: 0.2;
 }
 
 .selected img {
-    transform: scale(1.5);
-} 
+  transform: scale(1.5);
+}
 .m-pokemon .number {
-    background-color: #2a2a2a;
-    border-radius: 5px 5px 0 0;
-    color: white;
-    text-transform: capitalize;
-    padding: 8px;
+  background-color: #2a2a2a;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  text-transform: capitalize;
+  padding: 8px;
 }
 
 .m-pokemon .content {
-    border: 1px solid  #2a2a2a;
-    border-top: 0;
-    border-bottom: 0;
-    height: 100%;
+  border: 1px solid #2a2a2a;
+  border-top: 0;
+  border-bottom: 0;
+  height: 100%;
 }
 
-.m-pokemon .p-type{
-    border: 1px solid  #2a2a2a;
-    border-top: 0;
-    display: grid;
+.m-pokemon .p-type {
+  border: 1px solid #2a2a2a;
+  border-top: 0;
+  display: grid;
 }
 
 .m-pokemon img:hover {
-    filter: drop-shadow(0 1mm 4mm #ffffffcc);
-    animation: scaleAnimation 1s infinite
-}   
+  filter: drop-shadow(0 1mm 4mm #ffffffcc);
+  animation: scaleAnimation 1s infinite;
+}
 
 @keyframes scaleAnimation {
-    0%   { transform: scale(1) }
-    50%  { transform: scale(1.5) }
-    100% { transform: scale(1) }
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

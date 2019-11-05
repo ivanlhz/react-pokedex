@@ -1,11 +1,11 @@
 .m-chartline {
-    display: grid;
-    grid-template-columns: 200px 50px 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 200px 50px 1fr;
+  gap: 20px;
 }
 
 .m-chartline .m-chartline-name {
-    text-align: right;
-    color: #4b6a88;
-    text-transform: capitalize;
+  text-align: right;
+  color: #4b6a88;
+  text-transform: capitalize;
 }

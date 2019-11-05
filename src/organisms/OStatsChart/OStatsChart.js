@@ -1,16 +1,14 @@
 import React from 'react'
-import { MChartLine } from '../../molecules'
+import {MChartLine} from '../../molecules'
 
 const OStatsChart = ({stats}) => {
-    return (
-        <div className="o-statschart">
-            {
-                stats.map( (element, index) => 
-                    <MChartLine key={index} data={element} />
-                )
-            }
-        </div>
-    )
+  return (
+    <div className='o-statschart'>
+      {stats.map((element, index) => (
+        <MChartLine key={index} data={element} />
+      ))}
+    </div>
+  )
 }
 
-export default OStatsChart;
+export default OStatsChart

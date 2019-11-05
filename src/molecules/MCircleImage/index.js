@@ -1,1 +1,1 @@
-export {default as MCircleImage } from './MCircleImage'
+export {default as MCircleImage} from './MCircleImage'

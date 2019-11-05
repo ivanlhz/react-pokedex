@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier write \"**/*.+(md|js|jsx|json|css|scss|sass)\""
+    "format": "prettier --write \"**/*.+(md|js|jsx|json|css|scss|sass)\""
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,1 +1,1 @@
-export {default as PPokemon}  from "./PPokemon"
+export {default as PPokemon} from './PPokemon'

@@ -1,95 +1,95 @@
-[class^="type-"] {
-    text-transform: capitalize;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    cursor: pointer;
-    transition: .5s opacity ease-out;
-    opacity: 1;
+[class^='type-'] {
+  text-transform: capitalize;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  transition: 0.5s opacity ease-out;
+  opacity: 1;
 }
 
 .unSelected {
-    opacity: .2;
+  opacity: 0.2;
 }
 
 .unSelected:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .type-water {
-    background-color: #527DEE;
+  background-color: #527dee;
 }
 
 .type-fire {
-    background-color: #ED7C2E;
+  background-color: #ed7c2e;
 }
 
 .type-grass {
-    background-color: #66B33F;
+  background-color: #66b33f;
 }
 
 .type-dark {
-    background-color: #604D3E;
+  background-color: #604d3e;
 }
 
 .type-electric {
-    background-color: #EDCF22;
+  background-color: #edcf22;
 }
 
 .type-light {
-    background-color: #F8ED69;
+  background-color: #f8ed69;
 }
 
 .type-bug {
-    background-color: #A8B820;
+  background-color: #a8b820;
 }
 
 .type-ice {
-    background-color: #98D8D8;
+  background-color: #98d8d8;
 }
 
 .type-rock {
-    background-color: #B8A038;
+  background-color: #b8a038;
 }
 
 .type-psychic {
-    background-color: #F85888;
+  background-color: #f85888;
 }
 
 .type-fairy {
-    background-color: #F49BAC;
+  background-color: #f49bac;
 }
 
 .type-shadow {
-    background-color: #705848;
+  background-color: #705848;
 }
 
 .type-poison {
-    background-color: #A040A0;
+  background-color: #a040a0;
 }
 .type-ghost {
-    background-color: #5F2A75;
+  background-color: #5f2a75;
 }
 
 .type-steel {
-    background-color: #B8B8D0;
+  background-color: #b8b8d0;
 }
 
 .type-normal {
-    background-color: #9D9972;
+  background-color: #9d9972;
 }
 
 .type-flying {
-    background-color: #A890F0;
+  background-color: #a890f0;
 }
 .type-dragon {
-    background-color: #7038F8;
+  background-color: #7038f8;
 }
 .type-fighting {
-    background-color: #C02F27;
+  background-color: #c02f27;
 }
 .type-ground {
-    background-color: #E2C168;
+  background-color: #e2c168;
 }

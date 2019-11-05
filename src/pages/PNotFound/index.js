@@ -1,1 +1,1 @@
-export {default as PNotFound}  from "./PNotFound"
+export {default as PNotFound} from './PNotFound'
