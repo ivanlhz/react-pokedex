@@ -13,9 +13,7 @@ desplegar el proyecto consulta la documentacion oficial de react [aqui](README_R
 ### Instalación y puesta a punto🔧
 
 - Haz un folk y descarga o clona el repositorio en tu ordenador. (También puedes descargar y
-  descomprimir el proyecto en un directorio de tu eleccion.)
-- A continuación entra en el package.json del directorio raiz del proyecto, modifica la version y el
-  nombre del proyecto.
+  descomprimir el proyecto en un directorio de tu elección.)
 - Por último instala las dependencias.
 
 ```
