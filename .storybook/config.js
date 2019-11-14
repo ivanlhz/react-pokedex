@@ -1,10 +1,10 @@
 import { configure, addParameters } from '@storybook/react'
-import { themes } from '@storybook/theming';
+import MyTheme from './mytheme'
 
 // Option defaults.
 addParameters({
   options: {
-    theme: themes.normal,
+    theme: MyTheme,
   },
 });
 
