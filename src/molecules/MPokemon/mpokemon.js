@@ -51,7 +51,7 @@ const MPokemon = ({name, id, sprite, unSelected, types, typeCliked}) => {
 MPokemon.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
-  sprite: PropTypes.object.isRequired,
+  sprite: PropTypes.string.isRequired,
   unSelected: PropTypes.bool.isRequired,
   types: PropTypes.array.isRequired,
   typeCliked: PropTypes.func,
