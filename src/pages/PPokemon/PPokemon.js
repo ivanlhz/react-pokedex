@@ -59,7 +59,7 @@ const PPokemon = ({name, location}) => {
 }
 
 PPokemon.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   location: PropTypes.object,
 }
 

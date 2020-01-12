@@ -26,6 +26,9 @@ const OPokemonList = ({data, clickedType}) => {
   )
 }
 
-OPokemonList.propTypes = {data: PropTypes.array.isRequired, clickedType: PropTypes.func.isRequired}
+OPokemonList.propTypes = {
+  data: PropTypes.array.isRequired,
+  clickedType: PropTypes.func.isRequired,
+}
 
 export default OPokemonList

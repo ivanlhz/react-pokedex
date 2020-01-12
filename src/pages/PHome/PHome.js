@@ -26,7 +26,7 @@ class PHome extends Component {
   }
 }
 PHome.propTypes = {
-  location: PropTypes.object.isRequired,
+  location: PropTypes.object,
 }
 
 export default PHome

@@ -20,7 +20,7 @@ const AType = ({name, unSelected, clickHandler}) => {
 
 AType.propTypes = {
   name: PropTypes.string.isRequired,
-  unSelected: PropTypes.bool.isRequired,
+  unSelected: PropTypes.bool,
   clickHandler: PropTypes.func,
 }
 

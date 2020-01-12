@@ -19,7 +19,6 @@ export const Normal = () => {
       id={number('Id:', 3)}
       types={types}
       sprite={object('Sprite:', 'https://img.pokemondb.net/artwork/venusaur.jpg')}
-      unSelected={boolean('unSelected', true)}
     />
   )
 }

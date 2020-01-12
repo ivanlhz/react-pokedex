@@ -52,7 +52,7 @@ MPokemon.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   sprite: PropTypes.string.isRequired,
-  unSelected: PropTypes.bool.isRequired,
+  unSelected: PropTypes.bool,
   types: PropTypes.array.isRequired,
   typeCliked: PropTypes.func,
 }
