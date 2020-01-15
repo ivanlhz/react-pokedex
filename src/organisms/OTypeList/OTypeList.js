@@ -7,7 +7,6 @@ const OTypeList = ({list, selected}) => {
   const typeClicked = name => {
     if (selected) selected(name)
   }
-
   return (
     <div className='o-typelist'>
       {list.length > 0 &&
