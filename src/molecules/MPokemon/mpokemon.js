@@ -36,12 +36,8 @@ const MPokemon = ({name, id, sprite, unSelected, types, typeCliked}) => {
       </div>
       <div className='p-type'>
         {types &&
-          types.map((type, index) => (
-            <AType
-              key={index}
-              name={type.type.name}
-              clickHandler={() => pokeTypeClicked(type.type.name)}
-            />
+          types.map(({type}, index) => (
+            <AType key={index} name={type.name} clickHandler={() => pokeTypeClicked(type.name)} />
           ))}
       </div>
     </div>
