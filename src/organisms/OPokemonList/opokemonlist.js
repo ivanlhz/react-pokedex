@@ -1,13 +1,12 @@
 import React from 'react'
 import {MPokemon} from '../../molecules'
-import './opokelist.css'
+import './OPokeList.css'
 import PropTypes from 'prop-types'
 
 const OPokemonList = ({data, clickedType}) => {
   const pokemonsTypeClicked = name => {
     clickedType(name)
   }
-
   return (
     <div className='o-pokelist'>
       {data.map(({name, id, sprites: {front_default}, unSelected, types}) => (
