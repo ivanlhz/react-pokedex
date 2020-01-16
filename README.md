@@ -1,4 +1,5 @@
 # React - Pokedex
+[Online demo](https://pokereactjs.netlify.com/)
 
 Este proyecto ha sido creado durante streaming en directo en
 [twitch.tv](https://www.twitch.tv/ivanlhz) en el que hemos ido creando y enseñando poco a poco como
@@ -20,11 +21,16 @@ desplegar el proyecto consulta la documentacion oficial de react [aqui](README_R
 npm i
 ```
 
-o
+### Abrir en modo desarrollo
+```
+npm start
+```
 
+### Abrir Storybook
 ```
-yarn install
+npm run storybook
 ```
+
 
 ## Construido con 🛠️
 
