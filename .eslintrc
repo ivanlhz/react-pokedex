@@ -1,5 +1,5 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module",
@@ -18,7 +18,11 @@
         "es6": true
     },
     "plugins": ["react", "import", "prettier"],
-    "extends": ["plugin:prettier/recommended", "eslint:recommended", "plugin:react/recommended"],
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended"
+    ],
     "rules": {
         "import/first": "error",
         "no-console": "warn"
