@@ -1,18 +1,22 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './PHome.css'
 import {OPokemonList, OTypeList} from '../../organisms'
 import {TMain} from '../../templates'
 import {PokemonContext} from '../../appRouter'
 import PropTypes from 'prop-types'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faSpinner} from '@fortawesome/free-solid-svg-icons'
 
-class PHome extends Component {
-  footer = () => <p>PokedexJS - Made with ReactJS- 2019</p>
+const footer = () => <p>PokedexJS - Made with ReactJS- 2019</p>
 
-  render() {
-    return (
-      <TMain location={this.props.location} footer={this.footer}>
-        <PokemonContext.Consumer>
-          {({types, pokemons, filterPokemonByTypeName}) => (
+const PHome = ({location}) => {
+  return (
+    <PokemonContext.Consumer>
+      {({types, pokemons, filterPokemonByTypeName}) => (
+        <TMain location={location} footer={footer}>
+          {!pokemons ? (
+            <FontAwesomeIcon icon={faSpinner} pulse />
+          ) : (
             <>
               <OTypeList list={types} selected={name => filterPokemonByTypeName(name)} />
               {pokemons.length > 0 && (
@@ -20,10 +24,10 @@ class PHome extends Component {
               )}
             </>
           )}
-        </PokemonContext.Consumer>
-      </TMain>
-    )
-  }
+        </TMain>
+      )}
+    </PokemonContext.Consumer>
+  )
 }
 PHome.propTypes = {
   location: PropTypes.object,

@@ -9,11 +9,13 @@ import './style.css'
 
 const PPokemon = ({name, location}) => {
   const [description, setDescription] = useState(undefined)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const getPokemonDetails = async _name => {
       const specie = await getPokemonSpecies(_name)
       setDescription(getDescription(specie.flavor_text_entries))
+      setIsLoading(false)
     }
     getPokemonDetails(name)
   }, [name])
@@ -41,7 +43,7 @@ const PPokemon = ({name, location}) => {
                   alt={'pokemon-' + pokemon.name}
                 />
               )}
-              {
+              {!isLoading && (
                 <OInfoBlock
                   name={pokemon.name}
                   number={pokemon.id}
@@ -49,7 +51,7 @@ const PPokemon = ({name, location}) => {
                   types={pokemon.types}
                   description={description}
                 />
-              }
+              )}
             </div>
           )
         }}

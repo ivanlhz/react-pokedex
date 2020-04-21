@@ -4,7 +4,7 @@ import { themes } from '@storybook/theming';
 // Option defaults.
 addParameters({
   options: {
-    theme: themes.normal,
+    theme: themes.dark,
   },
 });
 

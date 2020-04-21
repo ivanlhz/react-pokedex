@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 const TMain = ({header, footer, children, location}) => (
   <>
-    <OTopMenu title='REACTJS - POKEDEX' location={location} />
+    <OTopMenu title='PokeReactJS' location={location} />
     <div className='t-main'>
       {header ? <div className='t-main-header'>{header}</div> : ''}
       <div className='t-main-content'>{children}</div>
