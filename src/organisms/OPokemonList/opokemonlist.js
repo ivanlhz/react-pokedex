@@ -7,6 +7,7 @@ const OPokemonList = ({data, clickedType}) => {
   const pokemonsTypeClicked = name => {
     clickedType(name)
   }
+
   return (
     <div className='o-pokelist'>
       {data.map(({name, id, sprites: {front_default}, unSelected, types}) => (
