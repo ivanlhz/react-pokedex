@@ -1,1 +1,1 @@
-export {default as OPokemonList} from './OPokemonList'
+export {default as OPokemonList} from './opokemonlist'
