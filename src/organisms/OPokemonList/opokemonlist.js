@@ -1,6 +1,6 @@
 import React from 'react'
 import {MPokemon} from '../../molecules'
-import './OPokeList.css'
+import './style.css'
 import PropTypes from 'prop-types'
 
 const OPokemonList = ({data, clickedType}) => {

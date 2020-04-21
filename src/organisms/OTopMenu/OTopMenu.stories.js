@@ -1,6 +1,6 @@
 import React from 'react'
 import {withKnobs, text, object} from '@storybook/addon-knobs'
-import OTopMenu from './OTopMenu'
+import OTopMenu from './otopmenu'
 
 export default {
   component: OTopMenu,

@@ -1,7 +1,7 @@
 import React from 'react'
 import {withKnobs} from '@storybook/addon-knobs'
 import {action} from '@storybook/addon-actions'
-import OPokemonList from './OPokemonList'
+import OPokemonList from './opokemonlist'
 
 export default {
   component: OPokemonList,
