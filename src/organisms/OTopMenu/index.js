@@ -1,1 +1,1 @@
-export {default as OTopMenu} from './OTopMenu'
+export {default as OTopMenu} from './otopmenu'
