@@ -1,6 +1,6 @@
 import React from 'react'
 import {MPokemon} from '../../molecules'
-import './opokelist.css'
+import './style.css'
 import PropTypes from 'prop-types'
 
 const OPokemonList = ({data, clickedType}) => {
@@ -26,6 +26,9 @@ const OPokemonList = ({data, clickedType}) => {
   )
 }
 
-OPokemonList.propTypes = {data: PropTypes.array.isRequired, clickedType: PropTypes.func.isRequired}
+OPokemonList.propTypes = {
+  data: PropTypes.array.isRequired,
+  clickedType: PropTypes.func.isRequired,
+}
 
 export default OPokemonList

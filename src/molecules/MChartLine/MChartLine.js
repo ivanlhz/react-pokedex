@@ -14,7 +14,7 @@ const MChartLine = ({data}) => {
 }
 MChartLine.propTypes = {
   data: PropTypes.shape({
-    stat: PropTypes.string.isRequired,
+    stat: PropTypes.object.isRequired,
     base_stat: PropTypes.number.isRequired,
   }),
 }
