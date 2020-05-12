@@ -3,11 +3,11 @@ import MInfoTitle from './MInfoTitle'
 import {withKnobs, text, number} from '@storybook/addon-knobs'
 
 export default {
-  component: MInfoTitle,
+  coponent: MInfoTitle,
   title: 'Molecules/MInfoTitle',
   decorators: [withKnobs],
 }
 
-export const MInfoTitleComponent = () => (
-  <MInfoTitle name={text('Name', 'Hello world')} id={number('ID', 22)} />
+export const Normal = () => (
+  <MInfoTitle name={text('Name:', 'Lorem itsum')} id={number('Id:', 222)} />
 )

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './style.css'
 
 const AType = ({name, unSelected, clickHandler}) => {
-  const getClassName = name => {
+  const getClassName = () => {
     let toReturn = 'type-' + name
     if (unSelected) {
       toReturn += ' unSelected'
@@ -12,7 +12,7 @@ const AType = ({name, unSelected, clickHandler}) => {
   }
 
   return (
-    <div onClick={clickHandler} className={getClassName(name)}>
+    <div onClick={clickHandler} className={getClassName()}>
       {name}
     </div>
   )

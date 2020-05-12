@@ -5,11 +5,11 @@ import Proptypes from 'prop-types'
 import './style.css'
 
 const ABarChart = ({value}) => {
-  const getClassName = currentValue => {
+  const getClassName = () => {
     let toReturn = 'a-barchart'
-    if (currentValue < 40) {
+    if (value < 40) {
       toReturn += ' red'
-    } else if (currentValue >= 40 && currentValue < 70) {
+    } else if (value >= 40 && value < 70) {
       toReturn += ' yellow'
     } else {
       toReturn += ' green'
@@ -19,13 +19,14 @@ const ABarChart = ({value}) => {
 
   return (
     <div
-      className={getClassName(value)}
+      className={getClassName()}
       css={css`
         width: ${(value * 100) / 255}%;
       `}
     />
   )
 }
+
 ABarChart.propTypes = {
   value: Proptypes.number.isRequired,
 }

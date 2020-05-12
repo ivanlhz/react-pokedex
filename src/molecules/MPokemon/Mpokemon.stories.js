@@ -1,6 +1,6 @@
 import React from 'react'
-import {MPokemon} from '.'
-import {withKnobs, text, boolean, array, number} from '@storybook/addon-knobs'
+import MPokemon from './mpokemon'
+import {withKnobs, text, number} from '@storybook/addon-knobs'
 import {action} from '@storybook/addon-actions'
 
 export default {
@@ -9,30 +9,20 @@ export default {
   decorators: [withKnobs],
 }
 
-export const Default = () => (
-  <MPokemon
-    id={number('Id', 6)}
-    name={text('Name', 'Charizard')}
-    unSelected={boolean('Unselected?', false)}
-    typeCliked={action('Pokemon TYPE clicked!!')}
-    sprite='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png'
-    types={array('Types Array', [
-      {slot: 2, type: {name: 'flying', url: 'https://pokeapi.co/api/v2/type/3/'}},
-      {slot: 1, type: {name: 'fire', url: 'https://pokeapi.co/api/v2/type/10/'}},
-    ])}
-  />
-)
+export const Normal = () => {
+  const types = [
+    {slot: 2, type: {name: 'flying', url: 'https://pokeapi.co/api/v2/type/3/'}},
+    {slot: 1, type: {name: 'fire', url: 'https://pokeapi.co/api/v2/type/10/'}},
+  ]
+  const clickHandler = () => action('Type is clicked!!')
 
-export const Unselected = () => (
-  <MPokemon
-    id={number('Id', 6)}
-    name={text('Name', 'Charizard')}
-    unSelected={boolean('Unselected?', true)}
-    typeCliked={action('Pokemon TYPE clicked!!')}
-    sprite='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png'
-    types={array('Types Array', [
-      {slot: 2, type: {name: 'flying', url: 'https://pokeapi.co/api/v2/type/3/'}},
-      {slot: 1, type: {name: 'fire', url: 'https://pokeapi.co/api/v2/type/10/'}},
-    ])}
-  />
-)
+  return (
+    <MPokemon
+      name={text('Name', 'Venosaur')}
+      id={number('Id:', 3)}
+      types={types}
+      sprite={text('Sprite:', 'https://img.pokemondb.net/artwork/venusaur.jpg')}
+      typeCliked={clickHandler()}
+    />
+  )
+}
