@@ -1,10 +1,10 @@
 import { configure, addParameters } from '@storybook/react'
-import { themes } from '@storybook/theming';
+import mytheme from './mytheme';
 
 // Option defaults.
 addParameters({
   options: {
-    theme: themes.dark,
+    theme: mytheme,
   },
 });
 

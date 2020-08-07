@@ -19,13 +19,14 @@ export const getClassName = currentValue => {
 const ABarChart = ({value}) => {
   return (
     <div
-      className={getClassName(value)}
+      className={getClassName()}
       css={css`
         width: ${(value * 100) / 255}%;
       `}
     />
   )
 }
+
 ABarChart.propTypes = {
   value: Proptypes.number.isRequired,
 }
