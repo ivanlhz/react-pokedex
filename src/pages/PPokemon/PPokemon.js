@@ -6,6 +6,7 @@ import {OInfoBlock} from '../../organisms'
 import {TMain} from '../../templates'
 import {PokemonContext} from '../../appRouter'
 import './style.css'
+import {ALoading} from '../../atoms'
 
 const PPokemon = ({name, location}) => {
   const [description, setDescription] = useState(undefined)
@@ -32,30 +33,26 @@ const PPokemon = ({name, location}) => {
 
   return (
     <TMain location={location} footer={footer}>
-      <PokemonContext.Consumer>
-        {({pokemons}) => {
-          const pokemon = getPokemonInfo(pokemons)
-          return (
-            <div className='p-pokemon'>
-              {pokemon && (
-                <MCircleImage
-                  imgSrc={`https://img.pokemondb.net/artwork/${pokemon.name}.jpg`}
-                  alt={'pokemon-' + pokemon.name}
-                />
-              )}
-              {!isLoading && (
-                <OInfoBlock
-                  name={pokemon.name}
-                  number={pokemon.id}
-                  stats={pokemon.stats}
-                  types={pokemon.types}
-                  description={description}
-                />
-              )}
-            </div>
-          )
-        }}
-      </PokemonContext.Consumer>
+      <ALoading isLoading={isLoading}>
+        <PokemonContext.Consumer>
+          {({pokemons}) => {
+            const pokemon = getPokemonInfo(pokemons)
+            return (
+              <div className='p-pokemon'>
+                {pokemon ? (
+                  <MCircleImage
+                    imgSrc={`https://img.pokemondb.net/artwork/${pokemon.name}.jpg`}
+                    alt={'pokemon-' + pokemon.name}
+                  />
+                ) : (
+                  <MCircleImage />
+                )}
+                {<OInfoBlock {...pokemon} description={description} />}
+              </div>
+            )
+          }}
+        </PokemonContext.Consumer>
+      </ALoading>
     </TMain>
   )
 }
