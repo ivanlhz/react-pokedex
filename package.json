@@ -19,9 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write \"**/*.+(md|js|jsx|json|css|scss|sass)\" --",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build:storybook": "build-storybook -s public"
+    "format": "prettier --write \"**/*.+(md|js|jsx|json|css|scss|sass)\" --"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,12 +37,6 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-knobs": "^5.3.18",
-    "@storybook/addon-links": "^5.3.18",
-    "@storybook/addons": "^5.3.18",
-    "@storybook/preset-create-react-app": "^1.5.2",
-    "@storybook/react": "^5.3.18",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
